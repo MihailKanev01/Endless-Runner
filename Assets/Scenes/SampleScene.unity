@@ -944,7 +944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   rb: {fileID: 1957079803}
-  horizontalMultiplier: 1.7
+  horizontalMultiplier: 1
   speedIncreasePoint: 0.1
   jumpForce: 600
   groundMask:
