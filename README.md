@@ -1,87 +1,83 @@
+
 # Endless Runner
 
 A Unity endless-runner gameplay prototype built with C#.
 
 ## Overview
 
-The project implements the core loop of an endless runner:
+The project implements the core gameplay loop of an endless runner: continuous forward movement, obstacle avoidance, collectibles, scoring and increasing speed.
 
-- forward player movement
-- horizontal lane-style movement
-- jumping
-- spawned ground tiles
-- obstacles
-- collectible coins
-- score tracking
-- increasing movement speed
-- scene restart after the player dies
+## Features
 
-## Technical focus
+- Forward player movement.
+- Horizontal lane-style movement.
+- Jumping.
+- Procedural ground-tile spawning.
+- Obstacles and collectible coins.
+- Score tracking.
+- Increasing movement speed.
+- Death and scene-restart flow.
 
-**Engine:** Unity  
-**Language:** C#
+## Technical Focus
 
-Key scripts:
+- Unity
+- C#
+- Procedural spawning
+- Gameplay state management
+- Collision-based interactions
+- Camera follow behaviour
 
-- `PlayerMovement.cs` — movement, jump, death and restart flow
-- `GroundSpawner.cs` — procedural ground-tile spawning
-- `GroundTile.cs` — obstacle and coin spawning
-- `Coin.cs` — collectible behaviour
-- `GameManager.cs` — score and speed progression
-- `CameraFollow.cs` — camera tracking
+## Main Scripts
 
-The repository also contains prefabs for ground tiles, obstacles and coins.
+- **PlayerMovement.cs** — movement, jumping, death and restart flow.
+- **GroundSpawner.cs** — procedural ground-tile spawning.
+- **GroundTile.cs** — obstacle and coin spawning.
+- **Coin.cs** — collectible behaviour.
+- **GameManager.cs** — score and speed progression.
+- **CameraFollow.cs** — camera tracking.
 
-## Gameplay loop
+## Gameplay Loop
 
-```text
-Spawn ground
-    ↓
-Run forward
-    ↓
-Avoid obstacles / collect coins
-    ↓
-Increase score
-    ↓
-Increase speed
-    ↓
-Fall / collide / die
-    ↓
-Restart scene
-```
+    Spawn ground
+        ↓
+    Run forward
+        ↓
+    Avoid obstacles / collect coins
+        ↓
+    Increase score
+        ↓
+    Increase speed
+        ↓
+    Fall / collide / die
+        ↓
+    Restart scene
 
-The ground spawner creates an initial sequence of tiles and then places obstacles and collectibles on subsequent tiles.
-
-## Run locally
+## Run Locally
 
 1. Clone the repository.
 2. Open the project with Unity.
-3. Open `Assets/Scenes/SampleScene.unity`.
+3. Open Assets/Scenes/SampleScene.unity.
 4. Press **Play**.
-
-Basic controls:
 
 | Action | Key |
 | --- | --- |
-| Move horizontally | A / D or arrow keys |
+| Move horizontally | A / D or Arrow Keys |
 | Jump | Space |
 
-## Repository structure
+## Repository Structure
 
-```text
-Assets/
-├── Prefabs/
-│   ├── Coin.prefab
-│   ├── GroundTile.prefab
-│   └── Obstacle.prefab
-├── Scenes/
-├── Scripts/
-└── Materials/
-```
+    Assets/
+    ├── Prefabs/
+    │   ├── Coin.prefab
+    │   ├── GroundTile.prefab
+    │   └── Obstacle.prefab
+    ├── Scenes/
+    ├── Scripts/
+    └── Materials/
 
-## Project status
+## Project Status
 
-A compact gameplay prototype focused on movement, spawning, collectibles, scoring and restart flow.
+A compact gameplay prototype focused on movement, procedural spawning, collectibles, scoring and restart flow.
 
 ## License
 
